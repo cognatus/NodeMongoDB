@@ -3,9 +3,9 @@ extends layout
 block content
 	p Tus amigos
 	br
-	//- each amigo in amigos
-	//- 	p id: #{amigo.nombre}
-	//- 	br
+	each amigo in amigos
+		p id: #{amigo._id} edad: #{amigo.edad}
+		br
 
 	br
 	br

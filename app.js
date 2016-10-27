@@ -8,6 +8,9 @@ var session = require('express-session');
 
 var bodyParser = require('body-parser');
 
+//variable para conexion a Base de Datos de MongoDB
+var mongoose = require('mongoose');
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
@@ -25,6 +28,21 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser('sabemos todo de ti'));
 app.use(session());
 app.use(express.static(path.join(__dirname, 'public')));
+
+//Conexión a MongoDB con mongoose.
+mongoose.connect('mongodb://localhost/usuarios', function(error){
+
+  if(error){
+
+    throw error; 
+
+  }else{
+
+    console.log('Estas conectado a MongoDB');
+
+  }
+});
+
 
 app.use('/', routes);
 app.use('/users', users);
