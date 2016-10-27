@@ -1,0 +1,28 @@
+extends layout
+
+block content
+
+	h1 Modifica un usuario a partir de su nombre
+
+	form( method="POST", action="/modificacion" )
+		p Nombre anterior
+		input( type="text", name="nombreViejo", id="nombreViejo" )
+		br
+		p Nombre nuevo
+		input( type="text", name="nombre", id="nombre" )
+		br
+		p Apellido nuevo
+		input( type="text", name="apellido", id="apellido" )
+		br
+		p Edad nueva
+		input( type="text", name="edad", id="edad" )
+		br
+		p Contrasenia nueva
+		input( type="text", name="contrasenia", id="contrasenia" )
+		br
+		input( type="submit", value="Modifica" )
+
+	br
+	br
+	br
+	a( href="/opciones" ) Opciones

@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+	h1 Registra un usuario
+
+	form( method="POST", action="/registra" )
+		p Nombre
+		input( type="text", name="nombre", id="nombre" )
+		br
+		p Apellido
+		input( type="text", name="apellido", id="apellido" )
+		br
+		p Edad
+		input( type="text", name="edad", id="edad" )
+		br
+		p Contrasenia
+		input( type="text", name="contrasenia", id="contrasenia" )
+		br
+		input( type="submit", value="Registra" )
+
+	br
+	br
+	br
+	a( href="/opciones" ) Opciones

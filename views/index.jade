@@ -4,7 +4,10 @@ block content
   h1= title
   p Welcome to #{title}
   form( method="POST", action="/inicio" )
-    p Ingresa el titulo de la aplicacion
-    input( type="text", name="titulo", id="titulo" )
+    p Ingresa el nombre de usuario
+    input( type="text", name="id", id="id" )
+    br
+    p Ingresa la contrasenia
+    input( type="text", name="contra", id="contra" )
     br
     input( type="submit")

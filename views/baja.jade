@@ -1,0 +1,14 @@
+extends layout
+
+block content
+
+  h1 Elimine a un usuario a aprtir de su nombre
+  form( method="POST", action="/baja" )
+    p Ingresa el nombre de usuario a eliminar
+    input( type="text", name="nombre", id="nombre" )
+    br
+    input( type="submit")
+  br
+  br
+  br
+  a( href="/opciones" ) Opciones
